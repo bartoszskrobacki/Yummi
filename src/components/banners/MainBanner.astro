@@ -1,0 +1,20 @@
+---
+import main from '@media/images/subject.png'
+import Image from 'astro/components/Image.astro'
+---
+
+<div class="w-full bg-secondary-100 pt-20">
+	<div class="container flex flex-col justify-start md:flex-row">
+		<div class="flex w-1/2 flex-col pt-20">
+			<span>NOWY MIOT JUZ W LIPCU</span>
+			<h1 class="mb-8">NEXT TO <span class="text-secondary">HEAVEN</span></h1>
+			<p class="text-primary-600">
+				Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego nowego
+				miotu!
+			</p>
+		</div>
+		<div class="w-1/2 px-32 pt-10">
+			<Image src={main} alt="" width={400} loading="eager" />
+		</div>
+	</div>
+</div>

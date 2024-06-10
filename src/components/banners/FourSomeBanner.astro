@@ -1,0 +1,42 @@
+---
+import first from '@media/images/sister.jpg'
+import second from '@media/images/winter.jpg'
+import third from '@media/images/duck.png'
+import fourth from '@media/images/lea.jpeg'
+
+import { Image } from 'astro:assets'
+
+const images = [
+	{
+		src: first,
+		rotation: 'rotate-6' // Class for a slight right tilt
+	},
+	{
+		src: second,
+		rotation: '-rotate-12' // Class for a pronounced left tilt
+	},
+	{
+		src: third,
+		rotation: 'rotate-6' // Repeat class for consistency or thematic design
+	},
+	{
+		src: fourth,
+		rotation: '-rotate-12' // Repeat class for consistency or thematic design
+	}
+]
+---
+
+<div id="galeria" class="mx-auto my-28 hidden max-w-[968px] scale-125 lg:grid lg:grid-cols-4">
+	{
+		images.map((image) => (
+			<a href="#_">
+				<Image
+					src={image.src}
+					loading="lazy"
+					class={`rounded-xl  ${image.rotation} h-full w-full origin-bottom transform object-cover duration-500 hover:-translate-y-12 hover:rotate-0 hover:scale-150`}
+					alt="#_"
+				/>
+			</a>
+		))
+	}
+</div>

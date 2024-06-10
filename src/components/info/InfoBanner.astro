@@ -1,0 +1,27 @@
+---
+import main from '@media/images/yummcia.jpeg'
+import zabki from '@media/images/zabki.jpeg'
+
+import Image from 'astro/components/Image.astro'
+---
+
+<div class="mt-10 w-full">
+	<div class="container flex flex-col items-center justify-center md:flex-row">
+		<div class="flex max-w-[500px] flex-col rounded-xl border-[1px] px-10 py-10 shadow-md">
+			<span class="text-xs text-secondary">NASZA HODOWLA</span>
+			<h2 class="mt-1 leading-none">NASZA HODOWLA</h2>
+			<p class="text-primary-600 text-sm">
+				Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego nowego
+				miotu! Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego
+				nowego miotu! Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do
+				naszego nowego miotu! Domowa hodowla, w której psy są zawsze na pierwszym miejscu.
+				Zapraszamy do naszego nowego miotu! Domowa hodowla, w której psy są zawsze na pierwszym
+				miejscu. Zapraszamy do naszego nowego miotu!
+			</p>
+		</div>
+		<div class="flex items-center justify-evenly gap-8 p-10">
+			<Image class="rounded-xl shadow-md" src={main} alt="" height={350} />
+			<Image class="rounded-xl shadow-md" src={zabki} alt="" height={320} />
+		</div>
+	</div>
+</div>

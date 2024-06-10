@@ -1,0 +1,27 @@
+---
+import Image from 'astro/components/Image.astro'
+
+export interface Props {
+	data: {
+		title: string
+		subtitle: string
+		additionalText: string
+		image: ImageMetadata
+	}
+}
+
+const { title, subtitle, additionalText, image } = Astro.props.data
+---
+
+<div
+	class="bg-primary-300 group grid min-h-52 grid-flow-col rounded-lg duration-500 ease-in-out hover:bg-secondary-100"
+>
+	<div><Image src={image} alt="" width={200} /></div>
+	<div class="flex flex-col px-4 py-8">
+		<h2 class="mb-0 duration-500 ease-in-out group-hover:text-primary">{title}</h2>
+		<span class="text-lg duration-200 ease-in-out group-hover:text-primary">{subtitle}</span>
+		<span class="du text-lg text-secondary duration-500 ease-in-out group-hover:text-primary"
+			>{additionalText}</span
+		>
+	</div>
+</div>

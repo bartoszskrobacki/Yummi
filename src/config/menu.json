@@ -1,0 +1,9 @@
+{
+	"main": [
+		{ "name": "STRONA GŁÓWNA", "url": "/" },
+		{ "name": "NASZA HODOWLA", "url": "/" },
+		{ "name": "MIOTY", "url": "/" },
+		{ "name": "GALERIA", "url": "galeria" },
+		{ "name": "KONTAKT", "url": "/kontakt" }
+	]
+}

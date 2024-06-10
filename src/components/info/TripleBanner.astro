@@ -1,0 +1,19 @@
+---
+import main from '@media/images/subject.png'
+import cool from '@media/images/cooldog.webp'
+
+import TripleCard from './TripleCard.astro'
+
+const data = {
+	title: 'TAKE ME HOME',
+	subtitle: 'COUNTRY ROADS',
+	additionalText: 'TO THE PLACE',
+	image: cool
+}
+---
+
+<div class="container mt-12 grid grid-cols-3 gap-10">
+	<TripleCard data={data} />
+	<TripleCard data={data} />
+	<TripleCard data={data} />
+</div>

@@ -10,8 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.9.1",
     "@astrojs/check": "^0.7.0",
+    "@astrojs/solid-js": "^4.2.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@solid-primitives/intersection-observer": "^2.1.6",
+    "astro": "^4.9.1",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "sharp": "^0.33.4",
+    "solid-js": "^1.8.17",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.14.0"
   }
 }
