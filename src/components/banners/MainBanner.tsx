@@ -27,7 +27,7 @@ export const MainBanner: Component<Props> = (props) => {
 				</div>
 				<div
 					class="w-1/2 px-32 pt-10 transition-transform duration-1000"
-					classList={{ 'translate-x-full': !startAnimation() }}
+					classList={{ 'translate-x-[150%]': !startAnimation() }}
 				>
 					<img src={cooldog.src} alt="" width={400} />
 				</div>

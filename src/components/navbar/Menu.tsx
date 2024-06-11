@@ -1,4 +1,4 @@
-import { createSignal, For, Show, type Component } from 'solid-js'
+import { createSignal, For, type Component } from 'solid-js'
 
 import menu from '@config/menu.json'
 
