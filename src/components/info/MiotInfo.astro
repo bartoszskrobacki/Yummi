@@ -1,0 +1,52 @@
+---
+import white from '@media/images/babyphotos/white.jpeg'
+import red from '@media/images/babyphotos/red.jpeg'
+import blue from '@media/images/babyphotos/blue.jpeg'
+import yellow from '@media/images/babyphotos/yellow.jpeg'
+
+import FlipCard from './FlipCard.astro'
+
+const data = {
+	title: 'ZIELONY CHŁOPCZYK',
+	subtitle: 'waga 330g',
+	born: '28.05.2024',
+	additionalText: 'Roronoa',
+	image: white
+}
+
+const data2 = {
+    title: 'ZIELONY CHŁOPCZYK',
+	subtitle: 'waga 330g',
+	born: '28.05.2024',
+	additionalText: 'Roronoa',
+	image: red
+}
+
+const data3 = {
+	title: 'NIEBIESKI CHŁOPCZYK',
+    subtitle: 'waga 330g',
+	born: '28.05.2024',
+	additionalText: 'Ramen',
+	image: blue
+}
+
+const data4 = {
+	title: 'ZIELONY',
+	subtitle: 'chłopczyk',
+	born: '28.05.2024',
+	additionalText: 'Roro',
+	image: yellow
+}
+
+---
+
+<h1 class="text-center">Miot <span class="text-secondary">"R"</span></h1>
+<div class="container mt-12 grid sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-10">
+	<FlipCard data={data} />
+    <FlipCard data={data2} />
+    <FlipCard data={data3} />
+    <FlipCard data={data4} />
+    <FlipCard data={data} />
+    <FlipCard data={data} />
+    <FlipCard data={data} />
+</div>

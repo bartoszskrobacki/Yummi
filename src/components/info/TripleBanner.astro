@@ -4,14 +4,15 @@ import cool from '@media/images/cooldog.webp'
 import TripleCard from './TripleCard.astro'
 
 const data = {
-	title: 'TAKE ME HOME',
-	subtitle: 'COUNTRY ROADS',
-	additionalText: 'TO THE PLACE',
+	title: 'ZIELONY',
+	subtitle: 'chłopczyk',
+	born: '28.05.2024',
+	additionalText: 'Roro',
 	image: cool
 }
 ---
 
-<div class="container mt-12 grid grid-cols-3 gap-10">
+<div class="container mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 	<TripleCard data={data} />
 	<TripleCard data={data} />
 	<TripleCard data={data} />
