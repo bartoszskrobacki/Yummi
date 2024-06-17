@@ -1,5 +1,5 @@
 ---
-
+import Icon from '@components/shared/Icon.astro'
 ---
 
 <div id="kontakt" class="bottom-0 flex w-full bg-primary-700 text-primary">
@@ -8,9 +8,19 @@
 	>
 		<div class="flex w-full flex-col">
 			<h2>NEXT TO <span class="text-secondary">HEAVEN</span></h2>
-			<a href="https://www.facebook.com/obiadygliwice" class="w-8 after:border-transparent">
-				<!-- <Icon icon="facebook" /> -->
-			</a>
+			<span class="text-xl">Zapraszamy na nasze social media:</span>
+			<div class="my-6 flex gap-16">
+				<a
+					href="https://www.facebook.com/profile.php?id=61560682794663"
+					class="w-8 after:border-transparent"
+				>
+					<Icon icon="facebook" />
+				</a>
+				<a href="https://www.instagram.com/yummithesamoyed/" class="w-8 after:border-transparent">
+					<Icon icon="instagram" />
+				</a>
+			</div>
+			<span>Codziennie aktualizacja z zycia naszych szczeniaków!</span>
 		</div>
 
 		<div class="flex w-full flex-col">

@@ -17,10 +17,10 @@ const { title, subtitle, image, transitionDelay } = Astro.props.data
 	<div
 		class="group container flex h-64 grid-flow-col rounded-lg bg-primary-300 duration-500 ease-in-out hover:bg-secondary-100"
 	>
-		<Image class="h-full w-52" src={image} alt="" height={240} width={240} />
+		<Image class="h-full w-40 sm:w-52" src={image} alt="" height={240} width={240} />
 		<div class="flex w-full flex-col px-4 py-4">
 			<h2
-				class="flex min-h-16 items-center justify-center text-base leading-6 duration-500 ease-in-out group-hover:text-primary"
+				class="flex min-h-16 items-center justify-center break-normal text-base leading-6 duration-500 ease-in-out group-hover:text-primary"
 			>
 				{title}
 			</h2>

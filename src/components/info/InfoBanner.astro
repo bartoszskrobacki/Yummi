@@ -20,7 +20,7 @@ import Image from 'astro/components/Image.astro'
 
 <div
 	id="info-banner"
-	class="container my-12 flex flex-col items-center justify-center opacity-0 duration-1000 md:flex-row"
+	class="container my-12 flex flex-col items-center justify-center px-6 opacity-0 duration-1000 md:flex-row"
 >
 	<div class="flex max-w-[600px] flex-col rounded-xl border-[1px] bg-primary px-10 py-10 shadow-md">
 		<span class="text-xs text-secondary">Opis</span>
@@ -41,7 +41,7 @@ import Image from 'astro/components/Image.astro'
 	<div class="flex items-center justify-evenly gap-8 p-10">
 		<Image class="rounded-xl shadow-md" src={waves} alt="" height={350} loading="lazy" />
 		<Image
-			class="hidden rounded-xl shadow-md lg:block"
+			class="hidden rounded-xl shadow-md xl:block"
 			src={yummcia}
 			alt=""
 			height={320}

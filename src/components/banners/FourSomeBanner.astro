@@ -41,7 +41,7 @@ const images = [
 
 <div
 	id="galeria"
-	class="mx-auto my-28 hidden max-w-[968px] scale-125 opacity-0 duration-1000 lg:grid lg:grid-cols-4"
+	class="mx-auto my-28 hidden max-w-[750px] scale-125 opacity-0 duration-1000 lg:grid lg:max-w-[968px] lg:grid-cols-4"
 >
 	{
 		images.map((image) => (
@@ -50,7 +50,7 @@ const images = [
 					src={image.src}
 					loading="lazy"
 					class={`rounded-xl  ${image.rotation} h-full w-full origin-bottom transform object-cover duration-500 hover:-translate-y-12 hover:rotate-0 hover:scale-150`}
-					alt="#_"
+					alt=""
 				/>
 			</a>
 		))

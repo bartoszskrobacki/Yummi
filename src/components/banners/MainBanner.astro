@@ -17,21 +17,21 @@ import Image from 'astro/components/Image.astro'
 	entries.forEach((el) => observer.observe(el))
 </script>
 
-<div id="main" class="w-full overflow-hidden bg-secondary-100 py-6 pt-20 duration-700">
+<div id="main" class="w-full overflow-hidden bg-secondary-100 py-6 pt-10 duration-700 md:pt-20">
 	<div
 		class="main-banner container flex flex-col justify-start opacity-0 duration-1000 md:flex-row"
 	>
-		<div class="flex w-1/2 flex-col pt-20">
+		<div class="flex flex-col-reverse px-10 pt-20 sm:flex-col md:px-20">
 			<span>NOWY MIOT JUZ DO ODBIORU W LIPCU</span>
-			<h1 class="mb-8">
+			<h1 class="mb-8 text-4xl md:text-7xl">
 				NEXT TO <span class="text-secondary">HEAVEN</span>
 			</h1>
-			<p class="text-primary-600">
+			<p class="hidden text-primary-600 sm:block">
 				Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego nowego
 				miotu!
 			</p>
 		</div>
-		<div class="main-banner w-full px-32 pt-10 opacity-0">
+		<div class="main-banner w-full px-10 pt-10 opacity-0 md:px-32">
 			<Image
 				class="translate-x-[200%] transition-transform duration-1000"
 				src={main}

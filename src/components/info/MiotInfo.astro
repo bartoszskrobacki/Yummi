@@ -1,41 +1,68 @@
 ---
-import white from '@media/images/babyphotos/white.jpeg'
-import red from '@media/images/babyphotos/red.jpeg'
-import blue from '@media/images/babyphotos/blue.jpeg'
-import yellow from '@media/images/babyphotos/yellow.jpeg'
+import white from '@media/images/babyphotos/white.webp'
+import red from '@media/images/babyphotos/red.webp'
+import blue from '@media/images/babyphotos/blue.webp'
+import yellow from '@media/images/babyphotos/yellow.webp'
+import black from '@media/images/babyphotos/black.webp'
+import grey from '@media/images/babyphotos/grey.webp'
+import green from '@media/images/babyphotos/green.webp'
 
 import FlipCard from './FlipCard.astro'
 
 const data = {
-	title: 'ZIELONY CHŁOPCZYK',
-	subtitle: 'waga 330g',
+	title: 'BIAŁY',
+	sex: 'CHŁOPCZYK',
+	name: 'RACUCH',
 	born: '28.05.2024',
-	additionalText: 'Roronoa',
 	image: white
 }
 
 const data2 = {
-	title: 'ZIELONY CHŁOPCZYK',
-	subtitle: 'waga 330g',
+	title: 'CZERWONA',
+	sex: 'DZIEWCZYNKA',
+	name: 'ROSE',
 	born: '28.05.2024',
-	additionalText: 'Roronoa',
 	image: red
 }
 
 const data3 = {
-	title: 'NIEBIESKI CHŁOPCZYK',
-	subtitle: 'waga 330g',
+	title: 'NIEBIESKI',
+	sex: 'CHŁOPCZYK',
+	name: 'RAMEN',
 	born: '28.05.2024',
-	additionalText: 'Ramen',
 	image: blue
 }
 
 const data4 = {
-	title: 'ZIELONY',
-	subtitle: 'chłopczyk',
+	title: 'CZARNY',
+	sex: 'CHŁOPCZYK',
+	name: 'ROBERTO',
 	born: '28.05.2024',
-	additionalText: 'Roro',
+	image: black
+}
+
+const data5 = {
+	title: 'SZARY',
+	sex: 'CHŁOPCZYK',
+	name: 'RAFAELLO',
+	born: '28.05.2024',
+	image: grey
+}
+
+const data6 = {
+	title: 'ZÓŁTY',
+	sex: 'CHŁOPCZYK',
+	name: 'RASTI',
+	born: '28.05.2024',
 	image: yellow
+}
+
+const data7 = {
+	title: 'ZIELONY',
+	sex: 'CHŁOPCZYK',
+	name: 'ROLLO',
+	born: '28.05.2024',
+	image: green
 }
 ---
 
@@ -48,10 +75,11 @@ const data4 = {
 		})
 	})
 
-	const entries = document.querySelectorAll('.hid')
+	const entries = document.querySelectorAll('div.chosen')
 	entries.forEach((el) => observer.observe(el))
 </script>
-<div id="mioty" class="hid mt-12 text-center opacity-0 duration-1000">
+
+<div id="mioty" class="chosen mt-12 text-center opacity-0 duration-1000">
 	<h1>
 		Miot <span class="text-secondary">"R"</span>
 	</h1>
@@ -62,7 +90,7 @@ const data4 = {
 	<FlipCard data={data2} />
 	<FlipCard data={data3} />
 	<FlipCard data={data4} />
-	<FlipCard data={data} />
-	<FlipCard data={data} />
-	<FlipCard data={data} />
+	<FlipCard data={data5} />
+	<FlipCard data={data6} />
+	<FlipCard data={data7} />
 </div>

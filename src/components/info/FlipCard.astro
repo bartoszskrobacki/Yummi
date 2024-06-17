@@ -4,17 +4,17 @@ import Image from 'astro/components/Image.astro'
 export interface Props {
 	data: {
 		title: string
-		subtitle: string
-		additionalText: string
+		name: string
 		born: string
+		sex: string
 		image: ImageMetadata
 	}
 }
 
-const { title, subtitle, additionalText, image, born } = Astro.props.data
+const { title, sex, name, image, born } = Astro.props.data
 ---
 
-<div class="hid group h-96 w-72 opacity-0 duration-1000 [perspective:1000px]">
+<div class="chosen group h-96 w-72 opacity-0 duration-1000 [perspective:1000px]">
 	<div
 		class="relative h-full w-full rounded-lg shadow-lg duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
 	>
@@ -27,13 +27,12 @@ const { title, subtitle, additionalText, image, born } = Astro.props.data
 			/>
 		</div>
 		<div
-			class="absolute inset-0 h-full w-full rounded-xl bg-black/40 px-20 py-20 text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]"
+			class="absolute inset-0 flex h-full w-full flex-col gap-3 rounded-xl bg-black/40 px-10 py-20 text-center text-xl text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]"
 		>
-			<h2 class="mb-0 duration-500 ease-in-out group-hover:text-primary">{title}</h2>
-			<span class="text-lg duration-200 ease-in-out group-hover:text-primary">{subtitle}</span>
-			<span class="du text-lg text-secondary duration-500 ease-in-out group-hover:text-secondary"
-				>{additionalText}</span
-			>
+			<h2 class="mb-0 text-xl duration-500 ease-in-out group-hover:text-primary">{title}</h2>
+			<span class="font-bold">{sex}</span>
+			<span class="text-lg duration-200 ease-in-out group-hover:text-primary">"{name}"</span>
+			<span>URODZONY</span>
 			<span>{born}</span>
 		</div>
 	</div>

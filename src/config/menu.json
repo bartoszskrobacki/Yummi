@@ -2,9 +2,9 @@
 	"main": [
 		{ "name": "STRONA GŁÓWNA", "url": "main" },
 		{ "name": "NASZA HODOWLA", "url": "info-banner" },
-		{ "name": "MIOTY", "url": "mioty" },
-		{ "name": "HISTORIA", "url": "historia" },
 		{ "name": "GALERIA", "url": "galeria" },
+		{ "name": "HISTORIA", "url": "historia" },
+		{ "name": "MIOTY", "url": "mioty" },
 		{ "name": "KONTAKT", "url": "kontakt" }
 	]
 }

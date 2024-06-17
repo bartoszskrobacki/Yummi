@@ -1,6 +1,6 @@
 import { createSignal, type Component } from 'solid-js'
 import { createViewportObserver } from '@solid-primitives/intersection-observer'
-import cooldog from '@media/images/subject.png'
+import cooldog from '@media/images/main.png'
 
 type Props = {}
 
@@ -15,7 +15,7 @@ export const MainBanner: Component<Props> = (props) => {
 			class="w-full overflow-hidden bg-secondary-100 pt-20"
 		>
 			<div class="container flex flex-col justify-start md:flex-row">
-				<div class="flex w-1/2 flex-col pt-20">
+				<div class="flex w-1/2 flex-col p-20">
 					<span>NOWY MIOT JUZ W LIPCU</span>
 					<h1 class="mb-8">
 						NEXT TO <span class="text-secondary">HEAVEN</span>
