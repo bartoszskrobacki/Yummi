@@ -2,28 +2,18 @@
 export const prerender = false
 import Layout from '@layouts/Layout.astro'
 import FourSomeBanner from '@components/banners/FourSomeBanner.astro'
-import { MainBanner } from '@components/banners/MainBanner.tsx'
+import MainBanner from '@components/banners/MainBanner.astro'
 import InfoBanner from '@components/info/InfoBanner.astro'
 import TripleBanner from '@components/info/TripleBanner.astro'
 import MiotInfo from '@components/info/MiotInfo.astro'
-
-export interface FoodMenuItem {
-	name: string
-	price: string
-	description?: string
-}
-
-export interface FoodCategory {
-	contentTypeId: string
-	name: string
-	fields: FoodMenuItem[]
-}
+import HistoryBanner from '@components/info/HistoryBanner.astro'
 ---
 
 <Layout title="Next to Heaven FCI">
-	<MainBanner client:idle />
+	<MainBanner />
 	<TripleBanner />
 	<InfoBanner />
 	<FourSomeBanner />
-	<MiotInfo/>
+	<HistoryBanner />
+	<MiotInfo />
 </Layout>

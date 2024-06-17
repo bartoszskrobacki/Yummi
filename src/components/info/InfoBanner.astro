@@ -1,27 +1,51 @@
 ---
-import main from '@media/images/yummcia.jpeg'
-import zabki from '@media/images/zabki.jpeg'
+import yummcia from '@media/images/yummcia.jpeg'
+import waves from '@media/images/waves.png'
 
 import Image from 'astro/components/Image.astro'
 ---
 
-<div class="mt-10 w-full">
-	<div class="container flex flex-col items-center justify-center md:flex-row">
-		<div class="flex max-w-[500px] flex-col rounded-xl border-[1px] px-10 py-10 shadow-md">
-			<span class="text-xs text-secondary">NASZA HODOWLA</span>
-			<h2 class="mt-1 leading-none">NASZA HODOWLA</h2>
-			<p class="text-primary-600 text-sm">
-				Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego nowego
-				miotu! Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego
-				nowego miotu! Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do
-				naszego nowego miotu! Domowa hodowla, w której psy są zawsze na pierwszym miejscu.
-				Zapraszamy do naszego nowego miotu! Domowa hodowla, w której psy są zawsze na pierwszym
-				miejscu. Zapraszamy do naszego nowego miotu!
-			</p>
-		</div>
-		<div class="flex items-center justify-evenly gap-8 p-10">
-			<Image class="rounded-xl shadow-md" src={main} alt="" height={350} />
-			<Image class="rounded-xl shadow-md hidden lg:block" src={zabki} alt="" height={320} />
-		</div>
+<script>
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('opacity-100')
+			}
+		})
+	})
+
+	const entry = document.querySelector('#info-banner')
+	if (entry) observer.observe(entry)
+</script>
+
+<div
+	id="info-banner"
+	class="container my-12 flex flex-col items-center justify-center opacity-0 duration-1000 md:flex-row"
+>
+	<div class="flex max-w-[600px] flex-col rounded-xl border-[1px] bg-primary px-10 py-10 shadow-md">
+		<span class="text-xs text-secondary">Opis</span>
+		<h2 class="mt-1 leading-none">NASZA HODOWLA</h2>
+		<p class="text-sm text-primary-600">
+			Nasza hodowla prowadzona jest z pasji do rasy, każdy psiak jest członkiem rodziny mieszka z
+			nami w domu, obdarowywany jest miłością. Psiaki podróżują razem z nami i mają zapewnione
+			różnego rodzaju rozrywki: codziennie długie spacery, zabierane są nad wodę, w góry (nawet na
+			narty). Rodzice są bardzo dobrze socjalizowani przez co nie mają problemu z obcymi zwierzętami
+			i ludźmi. Sąsiedzi, którzy spotykają moje psy na spacerach zawsze pytają jak ja to robię, że
+			one są takie spokojne i opanowane. Zawsze im mówię, że psy powinny umieć odnaleźć się w każdej
+			sytuacji i dlatego od najwcześniejszych dni stawiałam na naukę, powtarzalność pewnych
+			schematów, cierpliwość i spokój, socjalizację z innymi zwierzętami, częste krótkie powtórzenia
+			i rytuały oraz pokazywanie im wszystkiego wszystkiego co nas otacza. Założeniem naszej hodowli
+			jest to aby nasze psy były zdrowe, mądre i piękne.
+		</p>
+	</div>
+	<div class="flex items-center justify-evenly gap-8 p-10">
+		<Image class="rounded-xl shadow-md" src={waves} alt="" height={350} loading="lazy" />
+		<Image
+			class="hidden rounded-xl shadow-md lg:block"
+			src={yummcia}
+			alt=""
+			height={320}
+			loading="lazy"
+		/>
 	</div>
 </div>

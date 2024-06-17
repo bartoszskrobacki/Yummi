@@ -1,20 +1,44 @@
 ---
-import main from '@media/images/subject.png'
+import main from '@media/images/stand.webp'
 import Image from 'astro/components/Image.astro'
 ---
 
-<div class="w-full bg-secondary-100 pt-20">
-	<div class="container flex flex-col justify-start md:flex-row">
+<script>
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.firstElementChild?.classList.remove('translate-x-[200%]')
+				entry.target.classList.add('opacity-100')
+			}
+		})
+	})
+
+	const entries = document.querySelectorAll('.main-banner')
+	entries.forEach((el) => observer.observe(el))
+</script>
+
+<div id="main" class="w-full overflow-hidden bg-secondary-100 py-6 pt-20 duration-700">
+	<div
+		class="main-banner container flex flex-col justify-start opacity-0 duration-1000 md:flex-row"
+	>
 		<div class="flex w-1/2 flex-col pt-20">
-			<span>NOWY MIOT JUZ W LIPCU</span>
-			<h1 class="mb-8">NEXT TO <span class="text-secondary">HEAVEN</span></h1>
+			<span>NOWY MIOT JUZ DO ODBIORU W LIPCU</span>
+			<h1 class="mb-8">
+				NEXT TO <span class="text-secondary">HEAVEN</span>
+			</h1>
 			<p class="text-primary-600">
 				Domowa hodowla, w której psy są zawsze na pierwszym miejscu. Zapraszamy do naszego nowego
 				miotu!
 			</p>
 		</div>
-		<div class="w-1/2 px-32 pt-10">
-			<Image src={main} alt="" width={400} loading="eager" />
+		<div class="main-banner w-full px-32 pt-10 opacity-0">
+			<Image
+				class="translate-x-[200%] transition-transform duration-1000"
+				src={main}
+				alt=""
+				width={400}
+				loading="eager"
+			/>
 		</div>
 	</div>
 </div>

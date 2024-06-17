@@ -26,7 +26,23 @@ const images = [
 ]
 ---
 
-<div id="galeria" class="mx-auto my-28 hidden max-w-[968px] scale-125 lg:grid lg:grid-cols-4">
+<script>
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('opacity-100')
+			}
+		})
+	})
+
+	const entries = document.querySelectorAll('#galeria')
+	entries.forEach((el) => observer.observe(el))
+</script>
+
+<div
+	id="galeria"
+	class="mx-auto my-28 hidden max-w-[968px] scale-125 opacity-0 duration-1000 lg:grid lg:grid-cols-4"
+>
 	{
 		images.map((image) => (
 			<a href="#_">

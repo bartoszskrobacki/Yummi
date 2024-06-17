@@ -15,7 +15,7 @@ const data = {
 }
 
 const data2 = {
-    title: 'ZIELONY CHŁOPCZYK',
+	title: 'ZIELONY CHŁOPCZYK',
 	subtitle: 'waga 330g',
 	born: '28.05.2024',
 	additionalText: 'Roronoa',
@@ -24,7 +24,7 @@ const data2 = {
 
 const data3 = {
 	title: 'NIEBIESKI CHŁOPCZYK',
-    subtitle: 'waga 330g',
+	subtitle: 'waga 330g',
 	born: '28.05.2024',
 	additionalText: 'Ramen',
 	image: blue
@@ -37,16 +37,32 @@ const data4 = {
 	additionalText: 'Roro',
 	image: yellow
 }
-
 ---
 
-<h1 class="text-center">Miot <span class="text-secondary">"R"</span></h1>
-<div class="container mt-12 grid sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-10">
+<script>
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('opacity-100')
+			}
+		})
+	})
+
+	const entries = document.querySelectorAll('.hid')
+	entries.forEach((el) => observer.observe(el))
+</script>
+<div id="mioty" class="hid mt-12 text-center opacity-0 duration-1000">
+	<h1>
+		Miot <span class="text-secondary">"R"</span>
+	</h1>
+	<span>Najedź na zdjęcie, zeby poznać szczegóły o szczeniakach </span>
+</div>
+<div class="container my-12 flex w-full flex-wrap justify-center gap-10 duration-700">
 	<FlipCard data={data} />
-    <FlipCard data={data2} />
-    <FlipCard data={data3} />
-    <FlipCard data={data4} />
-    <FlipCard data={data} />
-    <FlipCard data={data} />
-    <FlipCard data={data} />
+	<FlipCard data={data2} />
+	<FlipCard data={data3} />
+	<FlipCard data={data4} />
+	<FlipCard data={data} />
+	<FlipCard data={data} />
+	<FlipCard data={data} />
 </div>

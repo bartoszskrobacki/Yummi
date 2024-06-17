@@ -26,3 +26,9 @@ a:hover {
 	color: rgb(67 124 138);
 	transition-duration: 700ms;
 }
+
+html {
+	font-family: 'Lato', 'Jaapokki', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 2px;
+	font-weight: 300;
+}

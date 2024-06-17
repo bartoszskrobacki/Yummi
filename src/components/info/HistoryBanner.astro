@@ -1,0 +1,47 @@
+---
+import yummcia from '@media/images/yummcia.jpeg'
+import waves from '@media/images/waves.png'
+
+import Image from 'astro/components/Image.astro'
+---
+
+<script>
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('opacity-100')
+			}
+		})
+	})
+
+	const entry = document.querySelector('#historia')
+	if (entry) observer.observe(entry)
+</script>
+
+<div
+	id="historia"
+	class="container my-12 flex flex-col items-center justify-center opacity-0 duration-1000 md:flex-row"
+>
+	<div class="flex max-w-3xl flex-col rounded-xl border-[1px] bg-primary px-10 py-10 shadow-md">
+		<span class="text-xs text-secondary">Historia</span>
+		<h2 class="mt-1 leading-none">MOJA PRZYGODA</h2>
+		<p class="text-sm text-primary-600">
+			Psy i inne zwierzęta towarzyszyły mi od najmłodszych lat, są teraz ze mną i nie wyobrażam
+			sobie życia bez nich. W domu rodzinnym niestety mama nie zgadzała się na kudłatego
+			przyjaciela, dlatego jak tylko mogłam poprosiłam, aby zawoziła mnie do dziadków na wieś. Tam
+			zawsze był pieseczek i inne zwierzęta, które wpłynęły na całe moje życie. Pies od dziadków
+			zawsze chodził za mną krok w krok, bo jak tylko przyjeżdżałam to uwalniałam go z łańcucha a
+			miałam może wtedy z 7-8 lat, chodziliśmy wszędzie razem, jedliśmy razem , biegali po łąkach i
+			polach – byliśmy nierozłączni. Po opuszczeniu domu rodzinnego i zamieszkaniu z mężem pojawił
+			się nasz pierwszy wspólny czworonożny przyjaciel berneńczyk Oskar potem mieliśmy drugiego
+			berneńczyka o tym samym imieniu. Jego odejściu w naszym domu zawitał owczarek niemiecki który
+			żyje do dziś, a 3 lata temu dołączyła do nas nasza samoyedka Yummii i wtedy zdecydowałam, że
+			stworzymy malutką domową hodowlę. I tak zaczęła się nasza przygoda z hodowaniem psów. Mam
+			tylko 2 psy ponieważ uważam że jestem w stanie im zapewnić to czego potrzebują czyli mojego
+			czasu i zainteresowania, wspólnych spacerów i nauki.
+		</p>
+	</div>
+	<div class="flex items-center justify-evenly gap-8 p-10">
+		<Image class="rounded-xl shadow-md" src={waves} alt="" height={350} loading="lazy" />
+	</div>
+</div>

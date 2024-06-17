@@ -1,19 +1,48 @@
 ---
 import cool from '@media/images/cooldog.webp'
+import main from '@media/images/glasses.png'
+import lick from '@media/images/lick.png'
 
 import TripleCard from './TripleCard.astro'
 
 const data = {
-	title: 'ZIELONY',
-	subtitle: 'chłopczyk',
-	born: '28.05.2024',
-	additionalText: 'Roro',
-	image: cool
+	title: 'ZDROWIE PSÓW',
+	subtitle:
+		' Hodowla zapewnia regularne badania weterynaryjne, szczepienia oraz odpowiednią dietę.',
+	image: cool,
+	transitionDelay: 'delay-100'
+}
+const data2 = {
+	title: 'WSPARCIE DLA NOWYCH WŁAŚCICIELI',
+	subtitle: 'Oferujemu pomoc i porady dla nowych właścicieli.',
+	image: lick,
+	transitionDelay: 'delay-200'
+}
+const data3 = {
+	title: ' SOCJALIZACJA',
+	subtitle:
+		'Szczenięta od pierwszych dni zycia mają regularny kontakt z ludźmi i innymi zwierzętami.',
+	image: main,
+	transitionDelay: 'delay-300'
 }
 ---
 
-<div class="container mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<script>
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('opacity-100')
+				entry.target.classList.remove('-translate-x-full')
+			}
+		})
+	})
+
+	const entries = document.querySelectorAll('.triple-card')
+	entries.forEach((el) => observer.observe(el))
+</script>
+
+<div class="container my-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
 	<TripleCard data={data} />
-	<TripleCard data={data} />
-	<TripleCard data={data} />
+	<TripleCard data={data2} />
+	<TripleCard data={data3} />
 </div>
