@@ -61,21 +61,20 @@ export const Menu: Component<Props> = (props) => {
 						class="absolute left-full top-[71px] z-[1] h-screen w-full border-t-2 border-primary-200 bg-primary bg-opacity-95 shadow-md duration-500"
 						classList={{ '-translate-x-full': showDropdown() }}
 					>
-						<ul class="flex h-full min-h-8 cursor-pointer flex-col items-center justify-start gap-8 border-b-2  py-4 text-center text-xl font-bold  text-primary-200">
+						<ul class="flex h-full min-h-8 cursor-pointer flex-col items-center justify-start gap-8 border-b-2  py-4 text-center text-xl font-bold text-primary-900">
 							<For each={main}>
 								{(menuItem) => (
 									<li onClick={hideDropDown} class="w-full">
-										<a onClick={() => scrollIntoView(menuItem.url)}>
-											<span
-												classList={{
-													'border-b border-primary-200 text-primary-900':
-														props.pathName === menuItem.url
-												}}
-												class="hover:text-secondary"
-											>
-												{menuItem.name}
-											</span>
-										</a>
+										<span
+											onClick={() => scrollIntoView(menuItem.url)}
+											classList={{
+												'border-b border-primary-200 text-primary-900 ':
+													props.pathName === menuItem.url
+											}}
+											class=" hover:text-secondary"
+										>
+											{menuItem.name}
+										</span>
 									</li>
 								)}
 							</For>
@@ -84,16 +83,14 @@ export const Menu: Component<Props> = (props) => {
 					<ul class="hidden min-h-8 cursor-pointer justify-center gap-5 py-4 text-xs font-bold md:flex">
 						<For each={main}>
 							{(menuItem) => (
-								<li>
-									<a
-										classList={{
-											'after:transform-none': props.pathName === menuItem.url
-										}}
-										class="duration-700 hover:text-secondary"
-										onClick={() => scrollIntoView(menuItem.url)}
-									>
-										{menuItem.name}
-									</a>
+								<li
+									classList={{
+										'after:transform-none': props.pathName === menuItem.url
+									}}
+									class="duration-700 hover:text-secondary"
+									onClick={() => scrollIntoView(menuItem.url)}
+								>
+									{menuItem.name}
 								</li>
 							)}
 						</For>
