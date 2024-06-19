@@ -1,6 +1,6 @@
 import { createSignal, type Component } from 'solid-js'
 import { createViewportObserver } from '@solid-primitives/intersection-observer'
-import cooldog from '@media/images/main.png'
+import cooldog from '@media/images/main.jpeg'
 
 type Props = {}
 
